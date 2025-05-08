@@ -115,7 +115,7 @@ jobs:
           echo "$EOF" >> $GITHUB_ENV
 
       - name: Build
-        uses: openwrt/gh-action-sdk@v8
+        uses: robimarko/gh-action-sdk@log
         env:
           ARCH: ${{ matrix.arch }}-${{ env.BRANCH }}
           FEEDNAME: packages_ci
