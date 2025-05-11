@@ -75,7 +75,7 @@ for PKG in /ci/*.[ai]pk; do
 	if [ $PKG_MANAGER = "opkg" ]; then
 		opkg install "$PKG"
 	elif [ $PKG_MANAGER = "apk" ]; then
-		apk add "$PKG"
+		apk add --repository /ci/packages.adb "$PKG"
 	fi
 
 	echo "Use package specific test.sh"
