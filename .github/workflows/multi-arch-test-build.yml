@@ -224,7 +224,8 @@ jobs:
         if: ${{ matrix.runtime_test && fromJSON(env.HAVE_PKGS) }}
         uses: actions/checkout@v4
         with:
-          repository: openwrt/actions-shared-workflows
+          repository: robimarko/actions-shared-workflows
+          ref: apk-local-feed
           path: dockerfiles_feeds
           sparse-checkout: |
             .github/scripts/ci_helpers.sh
