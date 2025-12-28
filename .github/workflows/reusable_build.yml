@@ -280,8 +280,9 @@ jobs:
       actions: write
 
     steps:
-      - name: Print disk info
-        run: df -h
+      - name: Test
+        run: |
+          du -sh .
 
       - name: Checkout master directory
         uses: actions/checkout@v6
