@@ -31,8 +31,6 @@ jobs:
       fail-fast: False
       matrix:
         include:
-          - target: malta
-            subtarget: be
           - target: x86
             subtarget: 64
     uses: ./.github/workflows/reusable_build.yml
@@ -56,8 +54,6 @@ jobs:
        fail-fast: False
        matrix:
         include:
-          - target: malta
-            subtarget: be
           - target: x86
             subtarget: 64
     secrets:
